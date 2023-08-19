@@ -1,82 +1,82 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="og:site_name" content="SwiftZone"/><link rel="canonical" href="https://swiftzone.dev/posts/focusedBinding"/><meta name="twitter:url" content="https://swiftzone.dev/posts/focusedBinding"/><meta name="og:url" content="https://swiftzone.dev/posts/focusedBinding"/><title>@FocusedBinding | SwiftZone</title><meta name="twitter:title" content="@FocusedBinding | SwiftZone"/><meta name="og:title" content="@FocusedBinding | SwiftZone"/><meta name="description" content="El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien"/><meta name="twitter:description" content="El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien"/><meta name="og:description" content="El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien"/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to SwiftZone"/><meta name="twitter:image" content="https://swiftzone.dev/images/blogBackground.svg"/><meta name="og:image" content="https://swiftzone.dev/images/blogBackground.svg"/></head><body class="item-page"><header><div class="wrapper"><div class="subheader"><a href="/"><h2>SwiftZone</h2></a></div><div class="subheader">Artículos, podcasts y noticias sobre el desarrollo de Swift, por <a href="https://twitter.com/asiel_cabrera">Asiel Cabrera</a></div><nav><ul><li><a class="selected" href="/posts">Artículos</a></li><li><a href="/project">Proyectos</a></li><li><a href="/tags">Tags</a></li><li><a href="/about">Sobre Me</a></li></ul></nav></div></header><div class="wrapper"><article><div><h1>@FocusedBinding</h1></div><div><ul class="tag-list"><li class="tag variant-2"><a href="/tags/swiftui">SwiftUI</a></li><li class="tag tagdate">20-01-2020</li></ul><div class="content"><blockquote><p>El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien</p></blockquote><pre><code><span class="hljs-keyword">struct</span> BookCommands: <span class="hljs-type">Commands</span> {
- <span class="hljs-keyword">@FocusedBinding</span>(\.<span class="hljs-property">selectedBook</span>) <span class="hljs-keyword">private var</span> selectedBook: <span class="hljs-type">Book</span>?
-  <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">Commands</span> {
-    <span class="hljs-type">CommandMenu</span>(<span class="hljs-string">"Book"</span>) {
-        <span class="hljs-type">Section</span> {
-            <span class="hljs-type">Button</span>(<span class="hljs-string">"Update Progress..."</span>, action: updateProgress)
-                .<span class="hljs-call">keyboardShortcut</span>(<span class="hljs-string">"u"</span>)
-            <span class="hljs-type">Button</span>(<span class="hljs-string">"Mark Completed"</span>, action: markCompleted)
-                .<span class="hljs-call">keyboardShortcut</span>(<span class="hljs-string">"C"</span>)
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="og:site_name" content="SwiftZone.dev"/><link rel="canonical" href="https://swiftzone.dev/posts/focusedBinding"/><meta name="twitter:url" content="https://swiftzone.dev/posts/focusedBinding"/><meta name="og:url" content="https://swiftzone.dev/posts/focusedBinding"/><title>@FocusedBinding • SwiftZone.dev</title><meta name="twitter:title" content="@FocusedBinding • SwiftZone.dev"/><meta name="og:title" content="@FocusedBinding • SwiftZone.dev"/><meta name="description" content="El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien"/><meta name="twitter:description" content="El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien"/><meta name="og:description" content="El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien"/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/DefaultTheme/styles.css" type="text/css"/><link rel="stylesheet" href="https://use.typekit.net/fof8oqj.css" type="text/css"/><link rel="stylesheet" href="/apps.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to SwiftZone.dev"/><meta name="twitter:image" content="https://swiftzone.dev/images/website.jpeg"/><meta name="og:image" content="https://swiftzone.dev/images/website.jpeg"/></head><body><header><div id="title"><a href="/">SwiftZone.dev</a></div><div id="subtitle">Sharing my interests in Swift, iOS, Apple &amp; more</div><div class="divider"></div><nav><ul><li><a class="selected" href="/">MY POSTS</a></li><li><a href="/apps">APPS</a></li><li><a href="/about">ABOUT</a></li><li><a target="_blank" href="https://s3.amazonaws.com/niazoff.com/resume.pdf">RESUME</a></li></ul></nav></header><main><article class="content" id="item-page-content"><h1>@FocusedBinding</h1><time id="item-page-date">Monday, January 20, 2020</time><blockquote><p>El siguiente código apareció en el video en Apple WWDC20, presentando un nuevo envoltorio de atributo @FocusedBinding. Como todavía se encuentra en la fase de prueba, el código actual no se puede ejecutar correctamente. Apple rara vez divulga la información de @FocusedBinding y no hay información relevante en Internet. Por interés personal, realicé una simple investigación al respecto. Aunque @FocusedBinding se ejecuta en la versión actual de Xcode Versión 12.0 beta 2 (12A6163b), todavía hay muchos problemas, pero básicamente lo entiendo bien</p></blockquote><pre><code><span class="keyword">struct</span> BookCommands: <span class="type">Commands</span> {
+ <span class="keyword">@FocusedBinding</span>(\.<span class="property">selectedBook</span>) <span class="keyword">private var</span> selectedBook: <span class="type">Book</span>?
+  <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">Commands</span> {
+    <span class="type">CommandMenu</span>(<span class="string">"Book"</span>) {
+        <span class="type">Section</span> {
+            <span class="type">Button</span>(<span class="string">"Update Progress..."</span>, action: updateProgress)
+                .<span class="call">keyboardShortcut</span>(<span class="string">"u"</span>)
+            <span class="type">Button</span>(<span class="string">"Mark Completed"</span>, action: markCompleted)
+                .<span class="call">keyboardShortcut</span>(<span class="string">"C"</span>)
         }
-        .<span class="hljs-call">disabled</span>(selectedBook == <span class="hljs-keyword">nil</span>)
+        .<span class="call">disabled</span>(selectedBook == <span class="keyword">nil</span>)
     }
   }
 
-   <span class="hljs-keyword">private func</span> updateProgress() {
-       selectedBook?.<span class="hljs-call">updateProgress</span>()
+   <span class="keyword">private func</span> updateProgress() {
+       selectedBook?.<span class="call">updateProgress</span>()
    }
-   <span class="hljs-keyword">private func</span> markCompleted() {
-       selectedBook?.<span class="hljs-call">markCompleted</span>()
+   <span class="keyword">private func</span> markCompleted() {
+       selectedBook?.<span class="call">markCompleted</span>()
    }
 }
-</code></pre><h2>Usar</h2><p><strong>Operaciones de intercambio, modificación y vinculación de datos entre cualquier vista (Vista).</strong></p><p>En SwiftUI1.0, podemos usar EnvironmentKey para pasar datos a la vista secundaria y PreferenceKey para pasar datos a la vista principal. Si queremos transferir datos entre dos vistas paralelas que no están en el mismo árbol de vistas, normalmente necesitamos usar Single of True o mediante NotificationCenter.</p><p>En SwiftUI2.0, Apple introdujo @FocusedBinding y @FocusedValue para resolver este problema. Al definir FocusedValueKey, podemos compartir, modificar y vincular datos directamente entre cualquier vista sin pasar por Single of truth.</p><p>En [SwiftUI2.0 —— Comandos (menú macOS)] (https://zhuanlan.zhihu.com/p/152127847) en este artículo, pasamos el método Único de verdad, a nivel de aplicación, para que los Commnads puedan compartir datos con otras vistas. A través de los ejemplos proporcionados por WWDC, podemos ver que Apple espera brindar una solución alternativa para completar las funciones mencionadas anteriormente. Del mismo modo, esta solución también nos permite intercambiar datos entre cualquier vista (ya sea en el mismo árbol o no).</p><h2>Instrucciones</h2><p>Su uso básico es muy similar al del entorno, primero debe definir la clave especificada</p><pre><code><span class="hljs-keyword">struct</span> FocusedMessageKey:<span class="hljs-type">FocusedValueKey</span>{
-    <span class="hljs-comment">// A diferencia de EnvironmentKey, FocusedValueKey no tiene un valor predeterminado 
+</code></pre><h2>Usar</h2><p><strong>Operaciones de intercambio, modificación y vinculación de datos entre cualquier vista (Vista).</strong></p><p>En SwiftUI1.0, podemos usar EnvironmentKey para pasar datos a la vista secundaria y PreferenceKey para pasar datos a la vista principal. Si queremos transferir datos entre dos vistas paralelas que no están en el mismo árbol de vistas, normalmente necesitamos usar Single of True o mediante NotificationCenter.</p><p>En SwiftUI2.0, Apple introdujo @FocusedBinding y @FocusedValue para resolver este problema. Al definir FocusedValueKey, podemos compartir, modificar y vincular datos directamente entre cualquier vista sin pasar por Single of truth.</p><p>En [SwiftUI2.0 —— Comandos (menú macOS)] (https://zhuanlan.zhihu.com/p/152127847) en este artículo, pasamos el método Único de verdad, a nivel de aplicación, para que los Commnads puedan compartir datos con otras vistas. A través de los ejemplos proporcionados por WWDC, podemos ver que Apple espera brindar una solución alternativa para completar las funciones mencionadas anteriormente. Del mismo modo, esta solución también nos permite intercambiar datos entre cualquier vista (ya sea en el mismo árbol o no).</p><h2>Instrucciones</h2><p>Su uso básico es muy similar al del entorno, primero debe definir la clave especificada</p><pre><code><span class="keyword">struct</span> FocusedMessageKey:<span class="type">FocusedValueKey</span>{
+    <span class="comment">// A diferencia de EnvironmentKey, FocusedValueKey no tiene un valor predeterminado 
     // y debe ser un valor opcional. Para la siguiente demostración, aquí establecemos el 
     // tipo de datos en Binding &lt;String&gt;, que se puede establecer en cualquier tipo de valor de datos</span>
-    <span class="hljs-keyword">typealias</span> Value = <span class="hljs-type">Binding</span>&lt;<span class="hljs-type">String</span>&gt;
+    <span class="keyword">typealias</span> Value = <span class="type">Binding</span>&lt;<span class="type">String</span>&gt;
 }
 
-<span class="hljs-keyword">extension</span> <span class="hljs-type">FocusedValues</span>{
+<span class="keyword">extension</span> <span class="type">FocusedValues</span>{
     
-    <span class="hljs-keyword">var</span> message:<span class="hljs-type">Binding</span>&lt;<span class="hljs-type">String</span>&gt;?{
-        <span class="hljs-keyword">get</span>{<span class="hljs-keyword">self</span>[<span class="hljs-type">FocusedMessageKey</span>.<span class="hljs-keyword">self</span>]}
-        <span class="hljs-keyword">set</span>{<span class="hljs-keyword">self</span>[<span class="hljs-type">FocusedMessageKey</span>.<span class="hljs-keyword">self</span>] = newValue}
+    <span class="keyword">var</span> message:<span class="type">Binding</span>&lt;<span class="type">String</span>&gt;?{
+        <span class="keyword">get</span>{<span class="keyword">self</span>[<span class="type">FocusedMessageKey</span>.<span class="keyword">self</span>]}
+        <span class="keyword">set</span>{<span class="keyword">self</span>[<span class="type">FocusedMessageKey</span>.<span class="keyword">self</span>] = newValue}
     }
 }
-</code></pre><p>Dado que se puede utilizar en cualquier vista, no es necesario inyectar datos. A diferencia de EnvironmentKey (solo válido en el árbol de vista inyectado actualmente), los datos son válidos en todo el dominio.</p><pre><code><span class="hljs-keyword">struct</span> ShowView:<span class="hljs-type">View</span>{
-    <span class="hljs-comment">// El método de llamada es casi el mismo que @Environment, usar @FocusedValue o 
+</code></pre><p>Dado que se puede utilizar en cualquier vista, no es necesario inyectar datos. A diferencia de EnvironmentKey (solo válido en el árbol de vista inyectado actualmente), los datos son válidos en todo el dominio.</p><pre><code><span class="keyword">struct</span> ShowView:<span class="type">View</span>{
+    <span class="comment">// El método de llamada es casi el mismo que @Environment, usar @FocusedValue o 
     // @FocusedBinding requiere un método de referencia diferente</span>
-    <span class="hljs-keyword">@FocusedValue</span>(\.<span class="hljs-property">message</span>) <span class="hljs-keyword">var</span> focusedMessage
-    <span class="hljs-comment">//@FocusedBinding(\.message) var focusedMessage1</span>
-    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span>{
-        <span class="hljs-type">VStack</span>{
-        <span class="hljs-type">Text</span>(<span class="hljs-string">"focused:</span>\(focusedMessage?.<span class="hljs-property">wrappedValue</span> ?? <span class="hljs-string">""</span>)<span class="hljs-string">"</span>)
-        <span class="hljs-comment">//Text("focused:\(focusedMessage1 ?? "")")</span>
+    <span class="keyword">@FocusedValue</span>(\.<span class="property">message</span>) <span class="keyword">var</span> focusedMessage
+    <span class="comment">//@FocusedBinding(\.message) var focusedMessage1</span>
+    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span>{
+        <span class="type">VStack</span>{
+        <span class="type">Text</span>(<span class="string">"focused:</span>\(focusedMessage?.<span class="property">wrappedValue</span> ?? <span class="string">""</span>)<span class="string">"</span>)
+        <span class="comment">//Text("focused:\(focusedMessage1 ?? "")")</span>
         }
     }
 }
-</code></pre><p>Modifique los datos de FocusedValueKey en otra vista.</p><pre><code><span class="hljs-keyword">struct</span> InputView1:<span class="hljs-type">View</span>{
-    <span class="hljs-keyword">@State private var</span> text = <span class="hljs-string">""</span>
-    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span>{
-        <span class="hljs-type">VStack</span>{
-        <span class="hljs-type">TextField</span>(<span class="hljs-string">"input1:"</span>,text:<span class="hljs-property">$text</span>)
-            .<span class="hljs-call">textFieldStyle</span>(<span class="hljs-type">RoundedBorderTextFieldStyle</span>())
-            <span class="hljs-comment">// Sincronizar mensaje y texto</span>
-            .<span class="hljs-call">focusedValue</span>(\.<span class="hljs-property">message</span>, <span class="hljs-property">$text</span>)
+</code></pre><p>Modifique los datos de FocusedValueKey en otra vista.</p><pre><code><span class="keyword">struct</span> InputView1:<span class="type">View</span>{
+    <span class="keyword">@State private var</span> text = <span class="string">""</span>
+    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span>{
+        <span class="type">VStack</span>{
+        <span class="type">TextField</span>(<span class="string">"input1:"</span>,text:<span class="property">$text</span>)
+            .<span class="call">textFieldStyle</span>(<span class="type">RoundedBorderTextFieldStyle</span>())
+            <span class="comment">// Sincronizar mensaje y texto</span>
+            .<span class="call">focusedValue</span>(\.<span class="property">message</span>, <span class="property">$text</span>)
         }
     }
 }
 
-</code></pre><p>La misma FocusedValueKey se puede modificar en varias vistas</p><pre><code><span class="hljs-keyword">struct</span> InputView2:<span class="hljs-type">View</span>{
-    <span class="hljs-keyword">@State private var</span> text = <span class="hljs-string">""</span>
-    <span class="hljs-keyword">var</span> body:<span class="hljs-keyword">some</span> <span class="hljs-type">View</span>{
-        <span class="hljs-type">TextField</span>(<span class="hljs-string">"input2:"</span>,text:<span class="hljs-property">$text</span>)
-            .<span class="hljs-call">textFieldStyle</span>(<span class="hljs-type">RoundedBorderTextFieldStyle</span>())
-            .<span class="hljs-call">focusedValue</span>(\.<span class="hljs-property">message</span>, <span class="hljs-property">$text</span>)
+</code></pre><p>La misma FocusedValueKey se puede modificar en varias vistas</p><pre><code><span class="keyword">struct</span> InputView2:<span class="type">View</span>{
+    <span class="keyword">@State private var</span> text = <span class="string">""</span>
+    <span class="keyword">var</span> body:<span class="keyword">some</span> <span class="type">View</span>{
+        <span class="type">TextField</span>(<span class="string">"input2:"</span>,text:<span class="property">$text</span>)
+            .<span class="call">textFieldStyle</span>(<span class="type">RoundedBorderTextFieldStyle</span>())
+            .<span class="call">focusedValue</span>(\.<span class="property">message</span>, <span class="property">$text</span>)
     }
 }
-</code></pre><p>Finalmente ensamblados juntos</p><pre><code><span class="hljs-keyword">struct</span> RootView: <span class="hljs-type">View</span> {
-    <span class="hljs-keyword">var</span> body: <span class="hljs-keyword">some</span> <span class="hljs-type">View</span> {
-        <span class="hljs-type">VStack</span>{
-            <span class="hljs-comment">// Las tres vistas están en una relación paralela Antes de utilizar Entorno o  
+</code></pre><p>Finalmente ensamblados juntos</p><pre><code><span class="keyword">struct</span> RootView: <span class="type">View</span> {
+    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> {
+        <span class="type">VStack</span>{
+            <span class="comment">// Las tres vistas están en una relación paralela Antes de utilizar Entorno o  
             // Preferencia, no se puede llevar a cabo la transmisión y el intercambio de 
             // datos entre estas tres vistas.</span>
-            <span class="hljs-type">InputView1</span>()
-            <span class="hljs-type">InputView2</span>()
-            <span class="hljs-type">ShowView</span>()
+            <span class="type">InputView1</span>()
+            <span class="type">InputView2</span>()
+            <span class="type">ShowView</span>()
         }
-        .<span class="hljs-call">padding</span>(.<span class="hljs-dotAccess">all</span>, <span class="hljs-number">20</span>)
-        .<span class="hljs-call">frame</span>(maxWidth:.infinity, maxHeight: .<span class="hljs-dotAccess">infinity</span>)
+        .<span class="call">padding</span>(.<span class="dotAccess">all</span>, <span class="number">20</span>)
+        .<span class="call">frame</span>(maxWidth:.infinity, maxHeight: .<span class="dotAccess">infinity</span>)
     }
 }
 </code></pre><!--<video src="http://cdn.fatbobman.com/focusebinding-video.mov" controls="controls"> ¡Su navegador no admite la reproducción de este video！</video>-->
@@ -90,4 +90,4 @@ La introducción de FoccusedBinding mejora aún más la función de manipulació
 Dado que podemos modificar el valor de la clave en cualquier vista, una vez que se abusa de ella, es probable que caiga en el dilema de que el código es difícil de administrar nuevamente.
 
 Para algunas funciones son muy simples, no es necesario usar el código lógico MVVM, o Single de verdad está demasiado hinchado（[ObservableObject Research: quiero decir que no es fácil amarte](/posts/observableObject-study/)），Para los códigos que pueden causar problemas de respuesta de la aplicación, considere usar el esquema anterior.
-</div></div></article><div class="item-navigator"><table><tr><td class="previous-item"><a href="/posts/publish-framework">Publish Framework</a></td><td></td></tr></table></div><footer><p>Copyright &copy; Asiel Cabrera 2022 </p><p>Generated using <a href="https://github.com/johnsundell/publish">Publish</a></p><ul><li><a href="https://twitter.com/asiel_cabrera">Twitter</a></li><li><a href="https://github.com/asielcabrera/">Github</a></li><li><a href="/feed.rss">RSS</a></li></ul></footer></div></body></html>
+</article></main><div class="spacer"></div><footer><div class="divider"></div><div id="footer-content"><p>Copyright © <script>document.write(new Date().getFullYear())</script> Asiel Cabrera</p><div><a class="social-icon" target="_blank" href="https://twitter.com/asiel_cabrera"><img src="/DefaultTheme/twitter.svg"/></a><a class="social-icon" target="_blank" href="https://github.com/asielcabrera"><img src="/DefaultTheme/github.svg"/></a></div></div></footer></body></html>

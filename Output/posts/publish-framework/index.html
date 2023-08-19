@@ -1,149 +1,149 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"/><meta name="og:site_name" content="SwiftZone"/><link rel="canonical" href="https://swiftzone.dev/posts/publish-framework"/><meta name="twitter:url" content="https://swiftzone.dev/posts/publish-framework"/><meta name="og:url" content="https://swiftzone.dev/posts/publish-framework"/><title>Publish Framework | SwiftZone</title><meta name="twitter:title" content="Publish Framework | SwiftZone"/><meta name="og:title" content="Publish Framework | SwiftZone"/><meta name="description" content="Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes."/><meta name="twitter:description" content="Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes."/><meta name="og:description" content="Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes."/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/styles.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to SwiftZone"/><meta name="twitter:image" content="https://swiftzone.dev/images/blogBackground.svg"/><meta name="og:image" content="https://swiftzone.dev/images/blogBackground.svg"/></head><body class="item-page"><header><div class="wrapper"><div class="subheader"><a href="/"><h2>SwiftZone</h2></a></div><div class="subheader">Artículos, podcasts y noticias sobre el desarrollo de Swift, por <a href="https://twitter.com/asiel_cabrera">Asiel Cabrera</a></div><nav><ul><li><a class="selected" href="/posts">Artículos</a></li><li><a href="/project">Proyectos</a></li><li><a href="/tags">Tags</a></li><li><a href="/about">Sobre Me</a></li></ul></nav></div></header><div class="wrapper"><article><div><h1>Publish Framework</h1></div><div><ul class="tag-list"><li class="tag variant-0"><a href="/tags/publish">publish</a></li><li class="tag variant-1"><a href="/tags/server-side">server side</a></li><li class="tag variant-3"><a href="/tags/web-develoment">web develoment</a></li><li class="tag tagdate">06-12-2021</li></ul><div class="content"><p align="center" margin-top="10px">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="og:site_name" content="SwiftZone.dev"/><link rel="canonical" href="https://swiftzone.dev/posts/publish-framework"/><meta name="twitter:url" content="https://swiftzone.dev/posts/publish-framework"/><meta name="og:url" content="https://swiftzone.dev/posts/publish-framework"/><title>Publish Framework • SwiftZone.dev</title><meta name="twitter:title" content="Publish Framework • SwiftZone.dev"/><meta name="og:title" content="Publish Framework • SwiftZone.dev"/><meta name="description" content="Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes."/><meta name="twitter:description" content="Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes."/><meta name="og:description" content="Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes."/><meta name="twitter:card" content="summary"/><link rel="stylesheet" href="/DefaultTheme/styles.css" type="text/css"/><link rel="stylesheet" href="https://use.typekit.net/fof8oqj.css" type="text/css"/><link rel="stylesheet" href="/apps.css" type="text/css"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="shortcut icon" href="/images/favicon.png" type="image/png"/><link rel="alternate" href="/feed.rss" type="application/rss+xml" title="Subscribe to SwiftZone.dev"/><meta name="twitter:image" content="https://swiftzone.dev/images/website.jpeg"/><meta name="og:image" content="https://swiftzone.dev/images/website.jpeg"/></head><body><header><div id="title"><a href="/">SwiftZone.dev</a></div><div id="subtitle">Sharing my interests in Swift, iOS, Apple &amp; more</div><div class="divider"></div><nav><ul><li><a class="selected" href="/">MY POSTS</a></li><li><a href="/apps">APPS</a></li><li><a href="/about">ABOUT</a></li><li><a target="_blank" href="https://s3.amazonaws.com/niazoff.com/resume.pdf">RESUME</a></li></ul></nav></header><main><article class="content" id="item-page-content"><h1>Publish Framework</h1><time id="item-page-date">Monday, December 6, 2021</time><p align="center" margin-top="10px">
     <img src="/images/blog/PublishLogo.png" width="400" max-width="90%" alt="Publish" />
-</p><p>Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes.</p><p>Cuando se usa Publish, cada sitio web se define como un paquete Swift, que actúa como la configuración de cómo se debe generar e implementar el sitio web, todo utilizando código Swift nativo y de tipo seguro.</p><h1>Instalación</h1><p>Publish se distribuye utilizando Swift Package Manager. Para instalarlo en un proyecto, agréguelo como una dependencia dentro de su manifiesto Package.swift:</p><pre><code><span class="hljs-keyword">let</span> package = <span class="hljs-type">Package</span>(
+</p><p>Publish framework es un generador de sitios estáticos desarrollado por John Sundell y creado específicamente para desarrolladores de Swift. Permite crear sitios web completos con Swift y admite temas, plugins y toneladas de otras opciones de personalización potentes.</p><p>Cuando se usa Publish, cada sitio web se define como un paquete Swift, que actúa como la configuración de cómo se debe generar e implementar el sitio web, todo utilizando código Swift nativo y de tipo seguro.</p><p>Publish se distribuye utilizando Swift Package Manager. Para instalarlo en un proyecto, agréguelo como una dependencia dentro de su manifiesto Package.swift:</p><pre><code><span class="keyword">let</span> package = <span class="type">Package</span>(
     ...
     dependencies: [
-        .<span class="hljs-call">package</span>(url: <span class="hljs-string">"https://github.com/johnsundell/publish.git"</span>, from: <span class="hljs-string">"0.1.0"</span>)
+        .<span class="call">package</span>(url: <span class="string">"https://github.com/johnsundell/publish.git"</span>, from: <span class="string">"0.1.0"</span>)
     ],
     ...
 )
-</code></pre><p>Luego, importe Publish donde quiera usarlo:</p><pre><code><span class="hljs-keyword">import</span> Publish
-</code></pre><p>Publish también incluye una herramienta de línea de comandos que facilita la configuración de nuevos proyectos de sitios web y la generación e implementación de los existentes. Para instalar esa herramienta de línea de comando, simplemente ejecute make dentro de una copia local del repositorio de publicación:</p><pre><code>$ git clone https://github.<span class="hljs-property">com</span>/<span class="hljs-type">JohnSundell</span>/<span class="hljs-type">Publish</span>.<span class="hljs-property">git</span>
-$ cd <span class="hljs-type">Publish</span>
+</code></pre><p>Luego, importe Publish donde quiera usarlo:</p><pre><code><span class="keyword">import</span> Publish
+</code></pre><p>Publish también incluye una herramienta de línea de comandos que facilita la configuración de nuevos proyectos de sitios web y la generación e implementación de los existentes. Para instalar esa herramienta de línea de comando, simplemente ejecute make dentro de una copia local del repositorio de publicación:</p><pre><code>$ git clone https://github.<span class="property">com</span>/<span class="type">JohnSundell</span>/<span class="type">Publish</span>.<span class="property">git</span>
+$ cd <span class="type">Publish</span>
 $ make
 </code></pre><p>A continuación, ejecute <code>publish help</code> para obtener instrucciones sobre cómo utilizarla.<br></br></p><p>La herramienta de línea de comando Publicar también está disponible a través de Homebrew y se puede instalar usando el siguiente comando si tiene Homebrew instalado:</p><pre><code>brew install publish
-</code></pre><h1>Inicio rápido</h1><p>Para comenzar rápidamente con Publish, instale la herramienta de línea de comando clonando primero este repositorio y luego ejecute <code>make</code> dentro de la carpeta clonada:</p><pre><code>$ git clone https://github.<span class="hljs-property">com</span>/<span class="hljs-type">JohnSundell</span>/<span class="hljs-type">Publish</span>.<span class="hljs-property">git</span>
-$ cd <span class="hljs-type">Publish</span>
+</code></pre><p>Para comenzar rápidamente con Publish, instale la herramienta de línea de comando clonando primero este repositorio y luego ejecute <code>make</code> dentro de la carpeta clonada:</p><pre><code>$ git clone https://github.<span class="property">com</span>/<span class="type">JohnSundell</span>/<span class="type">Publish</span>.<span class="property">git</span>
+$ cd <span class="type">Publish</span>
 $ make
-</code></pre><p><strong>*Nota</strong>: Si encuentra un error al ejecutar <code>make</code>, asegúrese de tener la ubicación de las herramientas de línea de comandos configurada en las preferencias de Xcode. Está en Preferencias&gt; Ubicaciones&gt; Ubicaciones&gt; Herramientas de línea de comandos. El menú desplegable estará en blanco si aún no se ha configurado._</p><p>Luego, cree una nueva carpeta para su nuevo proyecto de sitio web y simplemente ejecute <code>publish new</code> dentro de ella para comenzar:</p><pre><code>$ mkdir <span class="hljs-type">MyWebsite</span>
-$ cd <span class="hljs-type">MyWebsite</span>
+</code></pre><p><strong>*Nota</strong>: Si encuentra un error al ejecutar <code>make</code>, asegúrese de tener la ubicación de las herramientas de línea de comandos configurada en las preferencias de Xcode. Está en Preferencias&gt; Ubicaciones&gt; Ubicaciones&gt; Herramientas de línea de comandos. El menú desplegable estará en blanco si aún no se ha configurado._</p><p>Luego, cree una nueva carpeta para su nuevo proyecto de sitio web y simplemente ejecute <code>publish new</code> dentro de ella para comenzar:</p><pre><code>$ mkdir <span class="type">MyWebsite</span>
+$ cd <span class="type">MyWebsite</span>
 $ publish new
-</code></pre><p>Finalmente, ejecute <code>open Package.swift</code> para abrir el proyecto en Xcode y comenzar a construir su nuevo sitio web.</p><h1>Server</h1><p>Para iniciar el servidor de desarrollo ejecute en la raíz del proyecto <code>publish run</code> y le mostrara un mensaje en consola con la url a consultar.</p><h1>Comience de manera simple y personalice cuando sea necesario</h1><p>Cada sitio web creado con Publish puede decidir libremente qué tipo de secciones y metadatos desea admitir. Arriba, agregamos tres secciones: Recetas, Vínculos y Acerca de, que luego pueden contener cualquier cantidad de elementos. También hemos agregado soporte para nuestros propios metadatos de elementos específicos del sitio a través del tipo ItemMetadata, que podremos usar de manera totalmente segura durante todo el proceso de publicación.</p><pre><code><span class="hljs-keyword">struct</span> DeliciousRecipes: <span class="hljs-type">Website</span> {
-    <span class="hljs-keyword">enum</span> SectionID: <span class="hljs-type">String</span>, <span class="hljs-type">WebsiteSectionID</span> {
-        <span class="hljs-keyword">case</span> recipes
-        <span class="hljs-keyword">case</span> links
-        <span class="hljs-keyword">case</span> about
+</code></pre><p>Finalmente, ejecute <code>open Package.swift</code> para abrir el proyecto en Xcode y comenzar a construir su nuevo sitio web.</p><p>Cada sitio web creado con Publish puede decidir libremente qué tipo de secciones y metadatos desea admitir. Arriba, agregamos tres secciones: Recetas, Vínculos y Acerca de, que luego pueden contener cualquier cantidad de elementos. También hemos agregado soporte para nuestros propios metadatos de elementos específicos del sitio a través del tipo ItemMetadata, que podremos usar de manera totalmente segura durante todo el proceso de publicación.</p><pre><code><span class="keyword">struct</span> DeliciousRecipes: <span class="type">Website</span> {
+    <span class="keyword">enum</span> SectionID: <span class="type">String</span>, <span class="type">WebsiteSectionID</span> {
+        <span class="keyword">case</span> recipes
+        <span class="keyword">case</span> links
+        <span class="keyword">case</span> about
     }
 
-    <span class="hljs-keyword">struct</span> ItemMetadata: <span class="hljs-type">WebsiteItemMetadata</span> {
-        <span class="hljs-keyword">var</span> ingredients: [<span class="hljs-type">String</span>]
-        <span class="hljs-keyword">var</span> preparationTime: <span class="hljs-type">TimeInterval</span>
+    <span class="keyword">struct</span> ItemMetadata: <span class="type">WebsiteItemMetadata</span> {
+        <span class="keyword">var</span> ingredients: [<span class="type">String</span>]
+        <span class="keyword">var</span> preparationTime: <span class="type">TimeInterval</span>
     }
 
-    <span class="hljs-keyword">var</span> url = <span class="hljs-type">URL</span>(string: <span class="hljs-string">"https://cooking-with-john.com"</span>)!
-    <span class="hljs-keyword">var</span> name = <span class="hljs-string">"Delicious Recipes"</span>
-    <span class="hljs-keyword">var</span> description = <span class="hljs-string">"Many very delicious recipes."</span>
-    <span class="hljs-keyword">var</span> language: <span class="hljs-type">Language</span> { .<span class="hljs-dotAccess">english</span> }
-    <span class="hljs-keyword">var</span> imagePath: <span class="hljs-type">Path</span>? { <span class="hljs-string">"images/logo.png"</span> }
+    <span class="keyword">var</span> url = <span class="type">URL</span>(string: <span class="string">"https://cooking-with-john.com"</span>)!
+    <span class="keyword">var</span> name = <span class="string">"Delicious Recipes"</span>
+    <span class="keyword">var</span> description = <span class="string">"Many very delicious recipes."</span>
+    <span class="keyword">var</span> language: <span class="type">Language</span> { .<span class="dotAccess">english</span> }
+    <span class="keyword">var</span> imagePath: <span class="type">Path</span>? { <span class="string">"images/logo.png"</span> }
 }
-</code></pre><p>Si bien Publish ofrece una API realmente poderosa que permite personalizar y ajustar casi todos los aspectos del proceso de generación de sitios web, también incluye un conjunto de API de conveniencia que tiene como objetivo hacer que comenzar sea lo más rápido y fácil posible.</p><p>Para comenzar a generar el sitio web de Delicious Recipes que definimos anteriormente, todo lo que necesitamos es una sola línea de código, que le dice a Publish qué tema usar para generar el HTML de nuestro sitio web:</p><pre><code><span class="hljs-keyword">try</span> <span class="hljs-type">DeliciousRecipes</span>().<span class="hljs-call">publish</span>(withTheme: .<span class="hljs-dotAccess">foundation</span>)
-</code></pre><p><em>La llamada anterior no solo representa el HTML de nuestro sitio web, sino que también genera una fuente RSS, un mapa del sitio y más.</em></p><p>Anteriormente, usamos el tema básico integrado de Publish, que es un tema muy básico que se proporciona principalmente como punto de partida y como ejemplo de cómo se pueden crear los temas de Publish. Por supuesto, podemos reemplazar ese tema en cualquier momento por uno propio y personalizado, que puede incluir cualquier tipo de HTML y recursos que queramos.</p><p>De forma predeterminada, Publish generará el contenido de un sitio web en función de los archivos Markdown colocados dentro de la carpeta <code>Content</code> de ese proyecto, pero también se puede agregar mediante programación cualquier número de elementos de contenido y páginas personalizadas.</p><p><strong>Publish admite tres tipos de contenido:</strong></p><p><strong>Sections</strong>, que se crean en función de los miembros de la enumeración <code>SectionID</code> de cada sitio web. Cada sección tiene su propia página HTML y también puede actuar como un contenedor para una lista de <strong>Items</strong>, que representan las páginas HTML anidadas dentro de esa sección. Finalmente, <strong>Pages</strong> proporciona una forma de crear páginas personalizadas de formato libre que se pueden colocar en cualquier tipo de jerarquía de carpetas.</p><p>Cada <code>Section</code>, <code>Items</code> y <code>Page</code> puede definir su propio conjunto de Contenido, que puede variar desde texto (como títulos y descripciones) hasta HTML, audio, video y varios tipos de metadatos.</p><p>A continuación, le mostramos cómo podríamos extender nuestra llamada básica <code>publish()</code> desde antes para inyectar nuestra propia canalización de publicación personalizada, lo que nos permite definir nuevos elementos, modificar secciones y mucho más:</p><pre><code><span class="hljs-keyword">try</span> <span class="hljs-type">DeliciousRecipes</span>().<span class="hljs-call">publish</span>(
-    withTheme: .<span class="hljs-dotAccess">foundation</span>,
+</code></pre><p>Si bien Publish ofrece una API realmente poderosa que permite personalizar y ajustar casi todos los aspectos del proceso de generación de sitios web, también incluye un conjunto de API de conveniencia que tiene como objetivo hacer que comenzar sea lo más rápido y fácil posible.</p><p>Para comenzar a generar el sitio web de Delicious Recipes que definimos anteriormente, todo lo que necesitamos es una sola línea de código, que le dice a Publish qué tema usar para generar el HTML de nuestro sitio web:</p><pre><code><span class="keyword">try</span> <span class="type">DeliciousRecipes</span>().<span class="call">publish</span>(withTheme: .<span class="dotAccess">foundation</span>)
+</code></pre><p><em>La llamada anterior no solo representa el HTML de nuestro sitio web, sino que también genera una fuente RSS, un mapa del sitio y más.</em></p><p>Anteriormente, usamos el tema básico integrado de Publish, que es un tema muy básico que se proporciona principalmente como punto de partida y como ejemplo de cómo se pueden crear los temas de Publish. Por supuesto, podemos reemplazar ese tema en cualquier momento por uno propio y personalizado, que puede incluir cualquier tipo de HTML y recursos que queramos.</p><p>De forma predeterminada, Publish generará el contenido de un sitio web en función de los archivos Markdown colocados dentro de la carpeta <code>Content</code> de ese proyecto, pero también se puede agregar mediante programación cualquier número de elementos de contenido y páginas personalizadas.</p><p><strong>Publish admite tres tipos de contenido:</strong></p><p><strong>Sections</strong>, que se crean en función de los miembros de la enumeración <code>SectionID</code> de cada sitio web. Cada sección tiene su propia página HTML y también puede actuar como un contenedor para una lista de <strong>Items</strong>, que representan las páginas HTML anidadas dentro de esa sección. Finalmente, <strong>Pages</strong> proporciona una forma de crear páginas personalizadas de formato libre que se pueden colocar en cualquier tipo de jerarquía de carpetas.</p><p>Cada <code>Section</code>, <code>Items</code> y <code>Page</code> puede definir su propio conjunto de Contenido, que puede variar desde texto (como títulos y descripciones) hasta HTML, audio, video y varios tipos de metadatos.</p><p>A continuación, le mostramos cómo podríamos extender nuestra llamada básica <code>publish()</code> desde antes para inyectar nuestra propia canalización de publicación personalizada, lo que nos permite definir nuevos elementos, modificar secciones y mucho más:</p><pre><code><span class="keyword">try</span> <span class="type">DeliciousRecipes</span>().<span class="call">publish</span>(
+    withTheme: .<span class="dotAccess">foundation</span>,
     additionalSteps: [
-        <span class="hljs-comment">// Agrega un item mediante código</span>
-        .<span class="hljs-call">addItem</span>(<span class="hljs-type">Item</span>(
-            path: <span class="hljs-string">"my-favorite-recipe"</span>,
-            sectionID: .<span class="hljs-dotAccess">recipes</span>,
-            metadata: <span class="hljs-type">DeliciousRecipes</span>.<span class="hljs-type">ItemMetadata</span>(
-                ingredients: [<span class="hljs-string">"Chocolate"</span>, <span class="hljs-string">"Coffee"</span>, <span class="hljs-string">"Flour"</span>],
-                preparationTime: <span class="hljs-number">10</span> * <span class="hljs-number">60</span>
+        <span class="comment">// Agrega un item mediante código</span>
+        .<span class="call">addItem</span>(<span class="type">Item</span>(
+            path: <span class="string">"my-favorite-recipe"</span>,
+            sectionID: .<span class="dotAccess">recipes</span>,
+            metadata: <span class="type">DeliciousRecipes</span>.<span class="type">ItemMetadata</span>(
+                ingredients: [<span class="string">"Chocolate"</span>, <span class="string">"Coffee"</span>, <span class="string">"Flour"</span>],
+                preparationTime: <span class="number">10</span> * <span class="number">60</span>
             ),
-            tags: [<span class="hljs-string">"favorite"</span>, <span class="hljs-string">"featured"</span>],
-            content: <span class="hljs-type">Content</span>(
-                title: <span class="hljs-string">"Check out my favorite recipe!"</span>
+            tags: [<span class="string">"favorite"</span>, <span class="string">"featured"</span>],
+            content: <span class="type">Content</span>(
+                title: <span class="string">"Check out my favorite recipe!"</span>
             )
         )),
-        <span class="hljs-comment">// Agrega titulos por defecto a todas las secciones</span>
-        .<span class="hljs-call">step</span>(named: <span class="hljs-string">"Default section titles"</span>) { context <span class="hljs-keyword">in</span>
-            context.<span class="hljs-call">mutateAllSections</span> { section <span class="hljs-keyword">in
-                guard</span> section.<span class="hljs-property">title</span>.<span class="hljs-property">isEmpty</span> <span class="hljs-keyword">else</span> { <span class="hljs-keyword">return</span> }
+        <span class="comment">// Agrega titulos por defecto a todas las secciones</span>
+        .<span class="call">step</span>(named: <span class="string">"Default section titles"</span>) { context <span class="keyword">in</span>
+            context.<span class="call">mutateAllSections</span> { section <span class="keyword">in
+                guard</span> section.<span class="property">title</span>.<span class="property">isEmpty</span> <span class="keyword">else</span> { <span class="keyword">return</span> }
                 
-                <span class="hljs-keyword">switch</span> section.<span class="hljs-property">id</span> {
-                <span class="hljs-keyword">case</span> .<span class="hljs-dotAccess">recipes</span>:
-                    section.<span class="hljs-property">title</span> = <span class="hljs-string">"My recipes"</span>
-                <span class="hljs-keyword">case</span> .<span class="hljs-dotAccess">links</span>:
-                    section.<span class="hljs-property">title</span> = <span class="hljs-string">"External links"</span>
-                <span class="hljs-keyword">case</span> .<span class="hljs-dotAccess">about</span>:
-                    section.<span class="hljs-property">title</span> = <span class="hljs-string">"About this site"</span>
+                <span class="keyword">switch</span> section.<span class="property">id</span> {
+                <span class="keyword">case</span> .<span class="dotAccess">recipes</span>:
+                    section.<span class="property">title</span> = <span class="string">"My recipes"</span>
+                <span class="keyword">case</span> .<span class="dotAccess">links</span>:
+                    section.<span class="property">title</span> = <span class="string">"External links"</span>
+                <span class="keyword">case</span> .<span class="dotAccess">about</span>:
+                    section.<span class="property">title</span> = <span class="string">"About this site"</span>
                 }
             }
         }
     ]
 )
-</code></pre><p>Por supuesto, definir todo el código de un programa en un solo lugar rara vez es una buena idea, por lo que se recomienda dividir las diversas operaciones de generación de un sitio web en pasos claramente separados, que se pueden definir extendiendo el tipo <code>PublishingStep</code> con propiedades estáticas o métodos, como este:</p><pre><code><span class="hljs-keyword">extension</span> <span class="hljs-type">PublishingStep</span> <span class="hljs-keyword">where</span> <span class="hljs-type">Site</span> == <span class="hljs-type">DeliciousRecipes</span> {
-    <span class="hljs-keyword">static func</span> addDefaultSectionTitles() -&gt; <span class="hljs-type">Self</span> {
-        .<span class="hljs-call">step</span>(named: <span class="hljs-string">"Titulo de secciones por defecto"</span>) { context <span class="hljs-keyword">in</span>
-            context.<span class="hljs-call">mutateAllSections</span> { section <span class="hljs-keyword">in
-                guard</span> section.<span class="hljs-property">title</span>.<span class="hljs-property">isEmpty</span> <span class="hljs-keyword">else</span> { <span class="hljs-keyword">return</span> }
-                <span class="hljs-keyword">switch</span> section.<span class="hljs-property">id</span> {
-                <span class="hljs-keyword">case</span> .<span class="hljs-dotAccess">recipes</span>:
-                    section.<span class="hljs-property">title</span> = <span class="hljs-string">"My recipes"</span>
-                <span class="hljs-keyword">case</span> .<span class="hljs-dotAccess">links</span>:
-                    section.<span class="hljs-property">title</span> = <span class="hljs-string">"External links"</span>
-                <span class="hljs-keyword">case</span> .<span class="hljs-dotAccess">about</span>:
-                    section.<span class="hljs-property">title</span> = <span class="hljs-string">"About this site"</span>
+</code></pre><p>Por supuesto, definir todo el código de un programa en un solo lugar rara vez es una buena idea, por lo que se recomienda dividir las diversas operaciones de generación de un sitio web en pasos claramente separados, que se pueden definir extendiendo el tipo <code>PublishingStep</code> con propiedades estáticas o métodos, como este:</p><pre><code><span class="keyword">extension</span> <span class="type">PublishingStep</span> <span class="keyword">where</span> <span class="type">Site</span> == <span class="type">DeliciousRecipes</span> {
+    <span class="keyword">static func</span> addDefaultSectionTitles() -&gt; <span class="type">Self</span> {
+        .<span class="call">step</span>(named: <span class="string">"Titulo de secciones por defecto"</span>) { context <span class="keyword">in</span>
+            context.<span class="call">mutateAllSections</span> { section <span class="keyword">in
+                guard</span> section.<span class="property">title</span>.<span class="property">isEmpty</span> <span class="keyword">else</span> { <span class="keyword">return</span> }
+                <span class="keyword">switch</span> section.<span class="property">id</span> {
+                <span class="keyword">case</span> .<span class="dotAccess">recipes</span>:
+                    section.<span class="property">title</span> = <span class="string">"My recipes"</span>
+                <span class="keyword">case</span> .<span class="dotAccess">links</span>:
+                    section.<span class="property">title</span> = <span class="string">"External links"</span>
+                <span class="keyword">case</span> .<span class="dotAccess">about</span>:
+                    section.<span class="property">title</span> = <span class="string">"About this site"</span>
                 }
             }
         }
     }
 }
-</code></pre><p><em>A cada paso de publicación se le pasa una instancia de <code>PublishingContext</code>, que puede usar para mutar el contexto actual en el que se publica el sitio web, incluidos sus archivos, carpetas y contenido.</em></p><p>Con el patrón anterior, podemos implementar cualquier número de pasos de publicación personalizados que se ajusten perfectamente a todos los pasos predeterminados con los que se envía Publish. Esto nos permite construir pipelines realmente poderosos en los que cada paso realiza una sola parte del proceso de generación:</p><pre><code><span class="hljs-keyword">try</span> <span class="hljs-type">DeliciousRecipes</span>().<span class="hljs-call">publish</span>(using: [
-    .<span class="hljs-call">addMarkdownFiles</span>(),
-    .<span class="hljs-call">copyResources</span>(),
-    .<span class="hljs-call">addFavoriteItems</span>(),
-    .<span class="hljs-call">addDefaultSectionTitles</span>(),
-    .<span class="hljs-call">generateHTML</span>(withTheme: .<span class="hljs-dotAccess">delicious</span>),
-    .<span class="hljs-call">generateRSSFeed</span>(including: [.<span class="hljs-dotAccess">recipes</span>]),
-    .<span class="hljs-call">generateSiteMap</span>()
+</code></pre><p><em>A cada paso de publicación se le pasa una instancia de <code>PublishingContext</code>, que puede usar para mutar el contexto actual en el que se publica el sitio web, incluidos sus archivos, carpetas y contenido.</em></p><p>Con el patrón anterior, podemos implementar cualquier número de pasos de publicación personalizados que se ajusten perfectamente a todos los pasos predeterminados con los que se envía Publish. Esto nos permite construir pipelines realmente poderosos en los que cada paso realiza una sola parte del proceso de generación:</p><pre><code><span class="keyword">try</span> <span class="type">DeliciousRecipes</span>().<span class="call">publish</span>(using: [
+    .<span class="call">addMarkdownFiles</span>(),
+    .<span class="call">copyResources</span>(),
+    .<span class="call">addFavoriteItems</span>(),
+    .<span class="call">addDefaultSectionTitles</span>(),
+    .<span class="call">generateHTML</span>(withTheme: .<span class="dotAccess">delicious</span>),
+    .<span class="call">generateRSSFeed</span>(including: [.<span class="dotAccess">recipes</span>]),
+    .<span class="call">generateSiteMap</span>()
 ])
-</code></pre><p><em>Arriba, estamos construyendo una canalización de publicación completamente personalizada llamando a la API <code>publish(using:)</code>.</em></p><p>Para obtener más información sobre los pasos de publicación integrados de Publish,<a href="https://github.com/JohnSundell/Publish/blob/master/Sources/Publish/API/PublishingStep.swift">mira este archivo</a>.</p><h1>Construyendo un tema HTML</h1><p>Publish utiliza [Plot] (https://github.com/johnsundell/plot) como motor de creación de temas HTML, que permite definir páginas HTML completas mediante Swift. Al usar Publish, se recomienda que cree su propio tema específico para el sitio web, que puede hacer un uso completo de sus propios metadatos personalizados y adaptarse por completo al diseño de su sitio web.</p><p>Los temas se definen utilizando el tipo <code>Theme</code>, que utiliza una implementación de<code> HTMLFactory</code> para crear todas las páginas HTML de un sitio web. A continuación, se muestra un extracto de cómo se vería la implementación del tema personalizado <code>.delicious</code> utilizado anteriormente:</p><pre><code><span class="hljs-keyword">extension</span> <span class="hljs-type">Theme</span> <span class="hljs-keyword">where</span> <span class="hljs-type">Site</span> == <span class="hljs-type">DeliciousRecipes</span> {
-    <span class="hljs-keyword">static var</span> delicious: <span class="hljs-type">Self</span> {
-        <span class="hljs-type">Theme</span>(htmlFactory: <span class="hljs-type">DeliciousHTMLFactory</span>())
+</code></pre><p><em>Arriba, estamos construyendo una canalización de publicación completamente personalizada llamando a la API <code>publish(using:)</code>.</em></p><p>Para obtener más información sobre los pasos de publicación integrados de Publish,<a href="https://github.com/JohnSundell/Publish/blob/master/Sources/Publish/API/PublishingStep.swift">mira este archivo</a>.</p><p>Publish utiliza [Plot] (https://github.com/johnsundell/plot) como motor de creación de temas HTML, que permite definir páginas HTML completas mediante Swift. Al usar Publish, se recomienda que cree su propio tema específico para el sitio web, que puede hacer un uso completo de sus propios metadatos personalizados y adaptarse por completo al diseño de su sitio web.</p><p>Los temas se definen utilizando el tipo <code>Theme</code>, que utiliza una implementación de<code> HTMLFactory</code> para crear todas las páginas HTML de un sitio web. A continuación, se muestra un extracto de cómo se vería la implementación del tema personalizado <code>.delicious</code> utilizado anteriormente:</p><pre><code><span class="keyword">extension</span> <span class="type">Theme</span> <span class="keyword">where</span> <span class="type">Site</span> == <span class="type">DeliciousRecipes</span> {
+    <span class="keyword">static var</span> delicious: <span class="type">Self</span> {
+        <span class="type">Theme</span>(htmlFactory: <span class="type">DeliciousHTMLFactory</span>())
     }
-    <span class="hljs-keyword">private struct</span> DeliciousHTMLFactory: <span class="hljs-type">HTMLFactory</span> {
+    <span class="keyword">private struct</span> DeliciousHTMLFactory: <span class="type">HTMLFactory</span> {
         ...
-        <span class="hljs-keyword">func</span> makeItemHTML(
-            for item: <span class="hljs-type">Item</span>&lt;<span class="hljs-type">DeliciousRecipes</span>&gt;,
-            context: <span class="hljs-type">PublishingContext</span>&lt;<span class="hljs-type">DeliciousRecipes</span>&gt;
-        ) <span class="hljs-keyword">throws</span> -&gt; <span class="hljs-type">HTML</span> {
-            <span class="hljs-type">HTML</span>(
-                .<span class="hljs-call">head</span>(for: item, on: context.<span class="hljs-property">site</span>),
-                .<span class="hljs-call">body</span>(
-                    .<span class="hljs-call">ul</span>(
-                        .<span class="hljs-call">class</span>(<span class="hljs-string">"ingredients"</span>),
-                        .<span class="hljs-call">forEach</span>(item.<span class="hljs-property">metadata</span>.<span class="hljs-property">ingredients</span>) {
-                            .<span class="hljs-call">li</span>(.<span class="hljs-call">text</span>($0))
+        <span class="keyword">func</span> makeItemHTML(
+            for item: <span class="type">Item</span>&lt;<span class="type">DeliciousRecipes</span>&gt;,
+            context: <span class="type">PublishingContext</span>&lt;<span class="type">DeliciousRecipes</span>&gt;
+        ) <span class="keyword">throws</span> -&gt; <span class="type">HTML</span> {
+            <span class="type">HTML</span>(
+                .<span class="call">head</span>(for: item, on: context.<span class="property">site</span>),
+                .<span class="call">body</span>(
+                    .<span class="call">ul</span>(
+                        .<span class="call">class</span>(<span class="string">"ingredients"</span>),
+                        .<span class="call">forEach</span>(item.<span class="property">metadata</span>.<span class="property">ingredients</span>) {
+                            .<span class="call">li</span>(.<span class="call">text</span>($0))
                         }
                     ),
-                    .<span class="hljs-call">p</span>(
-                        <span class="hljs-string">"This will take around "</span>,
-                        <span class="hljs-string">"</span>\(<span class="hljs-type">Int</span>(item.<span class="hljs-property">metadata</span>.<span class="hljs-property">preparationTime</span> / <span class="hljs-number">60</span>)) <span class="hljs-string">"</span>,
-                        <span class="hljs-string">"minutes to prepare"</span>
+                    .<span class="call">p</span>(
+                        <span class="string">"This will take around "</span>,
+                        <span class="string">"</span>\(<span class="type">Int</span>(item.<span class="property">metadata</span>.<span class="property">preparationTime</span> / <span class="number">60</span>)) <span class="string">"</span>,
+                        <span class="string">"minutes to prepare"</span>
                     ),
-                    .<span class="hljs-call">contentBody</span>(item.<span class="hljs-property">body</span>)
+                    .<span class="call">contentBody</span>(item.<span class="property">body</span>)
                 )
             )
         }
         ...
     }
 }
-</code></pre><p>Arriba, podemos acceder tanto a las propiedades de elementos integradas como a las propiedades de metadatos personalizados que definimos anteriormente como parte de la estructura <code>ItemMetadata</code> de nuestro sitio web, todo ello de una manera que conserva la seguridad de tipo total.</p><h1>Creando Plugins</h1><p>Publish también admite complementos, que se pueden usar para compartir el código de configuración entre varios proyectos o para ampliar la funcionalidad integrada de Publish de varias formas. Al igual que los pasos de publicación, los complementos realizan su trabajo modificando el <code>PublishingContext</code> actual, por ejemplo, agregando archivos o carpetas, mutando el contenido existente del sitio web o agregando modificadores de análisis de Markdown.</p><p>A continuación, se muestra un ejemplo de un complemento que garantiza que todos los elementos de un sitio web tengan etiquetas:</p><pre><code><span class="hljs-keyword">extension</span> <span class="hljs-type">Plugin</span> {
-    <span class="hljs-keyword">static var</span> ensureAllItemsAreTagged: <span class="hljs-type">Self</span> {
-        <span class="hljs-type">Plugin</span>(name: <span class="hljs-string">"Ensure that all items are tagged"</span>) { context <span class="hljs-keyword">in
-            let</span> allItems = context.<span class="hljs-property">sections</span>.<span class="hljs-call">flatMap</span> { $0.<span class="hljs-property">items</span> }
-            <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> allItems {
-                <span class="hljs-keyword">guard</span> !item.<span class="hljs-property">tags</span>.<span class="hljs-property">isEmpty</span> <span class="hljs-keyword">else</span> {
-                    <span class="hljs-keyword">throw</span> <span class="hljs-type">PublishingError</span>(
-                        path: item.<span class="hljs-property">path</span>,
-                        infoMessage: <span class="hljs-string">"Item has no tags"</span>
+</code></pre><p>Arriba, podemos acceder tanto a las propiedades de elementos integradas como a las propiedades de metadatos personalizados que definimos anteriormente como parte de la estructura <code>ItemMetadata</code> de nuestro sitio web, todo ello de una manera que conserva la seguridad de tipo total.</p><p>Publish también admite complementos, que se pueden usar para compartir el código de configuración entre varios proyectos o para ampliar la funcionalidad integrada de Publish de varias formas. Al igual que los pasos de publicación, los complementos realizan su trabajo modificando el <code>PublishingContext</code> actual, por ejemplo, agregando archivos o carpetas, mutando el contenido existente del sitio web o agregando modificadores de análisis de Markdown.</p><p>A continuación, se muestra un ejemplo de un complemento que garantiza que todos los elementos de un sitio web tengan etiquetas:</p><pre><code><span class="keyword">extension</span> <span class="type">Plugin</span> {
+    <span class="keyword">static var</span> ensureAllItemsAreTagged: <span class="type">Self</span> {
+        <span class="type">Plugin</span>(name: <span class="string">"Ensure that all items are tagged"</span>) { context <span class="keyword">in
+            let</span> allItems = context.<span class="property">sections</span>.<span class="call">flatMap</span> { $0.<span class="property">items</span> }
+            <span class="keyword">for</span> item <span class="keyword">in</span> allItems {
+                <span class="keyword">guard</span> !item.<span class="property">tags</span>.<span class="property">isEmpty</span> <span class="keyword">else</span> {
+                    <span class="keyword">throw</span> <span class="type">PublishingError</span>(
+                        path: item.<span class="property">path</span>,
+                        infoMessage: <span class="string">"Item has no tags"</span>
                     )
                 }
             }
         }
     }
 }
-</code></pre><p>Luego, los complementos se instalan agregando el paso <code>installPlugin</code> a cualquier canal de publicación:</p><pre><code><span class="hljs-keyword">try</span> <span class="hljs-type">DeliciousRecipes</span>().<span class="hljs-call">publish</span>(using: [
+</code></pre><p>Luego, los complementos se instalan agregando el paso <code>installPlugin</code> a cualquier canal de publicación:</p><pre><code><span class="keyword">try</span> <span class="type">DeliciousRecipes</span>().<span class="call">publish</span>(using: [
     ...
-    .<span class="hljs-call">installPlugin</span>(.<span class="hljs-dotAccess">ensureAllItemsAreTagged</span>)
+    .<span class="call">installPlugin</span>(.<span class="dotAccess">ensureAllItemsAreTagged</span>)
 ])
-</code></pre><p>Para ver un ejemplo del mundo real de un plugin de Publish, consulte el [plugin de Splash] (https://github.com/johnsundell/splashpublishplugin), que facilita la integración del [resaltador de sintaxis de Splash] (https: / /github.com/johnsundell/splash) con Publicar.</p><h1>Requisitos del sistema</h1><p>Para poder utilizar Publish con éxito, asegúrese de que su sistema tenga <code>Swift versión 5.4 (o posterior) </code>instalada. Si está utilizando una Mac, asegúrese también de que <code>xcode-select</code> esté apuntando a una instalación de Xcode que incluya la versión requerida de Swift, y que esté ejecutando macOS Big Sur (11.0) o posterior.</p><p>Tenga en cuenta que Publish <strong>no</strong> admite oficialmente ningún tipo de software beta, incluidas las versiones beta de Xcode y macOS, o versiones inéditas de Swift.</p></div></div></article><div class="item-navigator"><table><tr><td></td><td class="next-item"><a href="/posts/focusedBinding">@FocusedBinding</a></td></tr></table></div><footer><p>Copyright &copy; Asiel Cabrera 2022 </p><p>Generated using <a href="https://github.com/johnsundell/publish">Publish</a></p><ul><li><a href="https://twitter.com/asiel_cabrera">Twitter</a></li><li><a href="https://github.com/asielcabrera/">Github</a></li><li><a href="/feed.rss">RSS</a></li></ul></footer></div></body></html>
+</code></pre><p>Para ver un ejemplo del mundo real de un plugin de Publish, consulte el [plugin de Splash] (https://github.com/johnsundell/splashpublishplugin), que facilita la integración del [resaltador de sintaxis de Splash] (https: / /github.com/johnsundell/splash) con Publicar.</p><p>Para poder utilizar Publish con éxito, asegúrese de que su sistema tenga <code>Swift versión 5.4 (o posterior) </code>instalada. Si está utilizando una Mac, asegúrese también de que <code>xcode-select</code> esté apuntando a una instalación de Xcode que incluya la versión requerida de Swift, y que esté ejecutando macOS Big Sur (11.0) o posterior.</p><p>Tenga en cuenta que Publish <strong>no</strong> admite oficialmente ningún tipo de software beta, incluidas las versiones beta de Xcode y macOS, o versiones inéditas de Swift.</p></article></main><div class="spacer"></div><footer><div class="divider"></div><div id="footer-content"><p>Copyright © <script>document.write(new Date().getFullYear())</script> Asiel Cabrera</p><div><a class="social-icon" target="_blank" href="https://twitter.com/asiel_cabrera"><img src="/DefaultTheme/twitter.svg"/></a><a class="social-icon" target="_blank" href="https://github.com/asielcabrera"><img src="/DefaultTheme/github.svg"/></a></div></div></footer></body></html>

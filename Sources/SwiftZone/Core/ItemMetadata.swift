@@ -2,14 +2,12 @@
 //  ItemMetadata.swift
 //  
 //
-//  Created by Asiel Cabrera Gonzalez on 10/25/22.
+//  Created by Asiel Cabrera Gonzalez on 8/19/23.
 //
 
-import Foundation
 import Publish
+import Plot
 
-extension SwiftZone {
-    struct ItemMetadata: WebsiteItemMetadata {
-        // Add any site-specific metadata that you want to use here.
-    }
+extension SwiftZone.com {
+    struct ItemMetadata: WebsiteItemMetadata {}
 }

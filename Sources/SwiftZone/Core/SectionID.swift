@@ -2,14 +2,14 @@
 //  SectionID.swift
 //  
 //
-//  Created by Asiel Cabrera Gonzalez on 10/25/22.
+//  Created by Asiel Cabrera Gonzalez on 8/19/23.
 //
 
-import Foundation
 import Publish
+import Plot
 
-extension SwiftZone {
+extension SwiftZone.com {
     enum SectionID: String, WebsiteSectionID {
-        case index, posts, project, tags, about
+      case posts
     }
 }
