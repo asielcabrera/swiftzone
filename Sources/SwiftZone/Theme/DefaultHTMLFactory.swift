@@ -77,7 +77,9 @@ struct DefaultHTMLFactory<Site: Website>: HTMLFactory {
               .text(item.title)
             )),
             .div(.class("item-date"),
-                 .text(DateFormatter.localizedString(from: item.date, dateStyle: .full, timeStyle: .none))),
+                 .text(DateFormatter.localizedString(from: item.date, dateStyle: .full, timeStyle: .none)),
+                 .text(" - \(item.readingTime.minutes) minutes lecture.")
+            ),
             .p(.text(item.description)),
             .a(.class("read-more"), .href(item.path), .text("Read more..."))
           )

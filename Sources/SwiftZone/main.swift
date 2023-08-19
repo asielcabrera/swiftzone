@@ -24,7 +24,9 @@ try SwiftZone.com().publish(withTheme: .default(
   twitterURL: "https://twitter.com/asiel_cabrera",
   githubURL: "https://github.com/asielcabrera"
 ), additionalSteps: [
-  .addAppMarkdownFiles()
+//  .addAppMarkdownFiles()
+    .installPlugin(.readingTime())
 ], plugins: [
-  .splash(withClassPrefix: "")
+  .splash(withClassPrefix: ""),
+  
 ])
