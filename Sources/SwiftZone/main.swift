@@ -17,8 +17,9 @@ try SwiftZone.com().publish(withTheme: .default(
   pagePaths: ["apps", "about"],
   contentPagePaths: ["about"],
   navigationLinks: [
-    .init(name: "Resume",
-          url: "https://s3.amazonaws.com/niazoff.com/resume.pdf")],
+//    .init(name: "Resume",
+//          url: "https://s3.amazonaws.com/niazoff.com/resume.pdf")
+  ],
   copyright: "Asiel Cabrera",
   twitterURL: "https://twitter.com/asiel_cabrera",
   githubURL: "https://github.com/asielcabrera"

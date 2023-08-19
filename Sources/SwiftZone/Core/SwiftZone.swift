@@ -13,8 +13,8 @@ enum SwiftZone {
   struct com: Website {
     var url = URL(string: "https://swiftzone.dev")!
     var name = "SwiftZone.dev"
-    var description = "Sharing my interests in Swift, iOS, Apple & more"
+    var description = "Sharing my interests in Swift, iOS, Apple & more by Asiel Cabrera"
     var language: Language { .english }
-    var imagePath: Path? { "/images/website.jpeg" }
+    var imagePath: Path? { "/images/website.png" }
   }
 }

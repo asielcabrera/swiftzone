@@ -10,6 +10,6 @@ import Plot
 
 extension SwiftZone.com {
     enum SectionID: String, WebsiteSectionID {
-      case posts
+      case articles
     }
 }

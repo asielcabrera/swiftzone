@@ -88,54 +88,6 @@ struct DefaultHTMLFactory<Site: Website>: HTMLFactory {
   )}
 }
 
-private extension Content.Body {
-  func removingOccurrences(of string: String) -> Self {
-    .init(html: html.replacingOccurrences(of: string, with: "", options: .regularExpression))
-  }
-  
-  func removingH1() -> Self {
-    self.removingOccurrences(of: "<h1>.*</h1>")
-  }
-}
 
-private extension Node where Context == HTML.BodyContext {
-  static func header<Site: Website>(for context: PublishingContext<Site>, pagePaths: [Path] = [], navigationLinks: [DefaultNavigationLink] = [], selectedSection: Site.SectionID? = nil, selectedPage: Page? = nil) -> Node {
-    .header(
-      .div(.id("title"), .a(.href("/"), .text(context.site.name))),
-      .div(.id("subtitle"), .text(context.site.description)),
-      .div(.class("divider")),
-      .nav(.ul(
-        .forEach(Site.SectionID.allCases) { section in
-          .li(.a(
-            .class(section == selectedSection ? "selected" : ""),
-            .href("/"),
-            .text(context.sections[section].title.uppercased())
-          ))
-        },
-        .forEach(pagePaths.compactMap { context.pages[$0] }) { page in
-          .li(.a(
-            .class(page == selectedPage ? "selected" : ""),
-            .href(page.path),
-            .text(page.content.title.uppercased())
-          ))
-        },
-        .forEach(navigationLinks) { link in
-          .li(.a(.target(.blank), .href(link.url), .text(link.name.uppercased())))
-        }
-      ))
-    )
-  }
-  
-  static func footer(copyright: String, twitterURL: URLRepresentable?, githubURL: URLRepresentable?) -> Node {
-    .footer(
-      .div(.class("divider")),
-      .div(.id("footer-content"),
-        .p("Copyright © ", .script("document.write(new Date().getFullYear())"), " \(copyright)"),
-        .div(
-          .unwrap(twitterURL) { .a(.class("social-icon"), .target(.blank), .href($0), .img(.src("/DefaultTheme/twitter.svg"))) },
-          .unwrap(githubURL) { .a(.class("social-icon"), .target(.blank), .href($0), .img(.src("/DefaultTheme/github.svg"))) }
-        )
-      )
-    )
-  }
-}
+
+
