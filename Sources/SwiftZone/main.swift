@@ -25,7 +25,8 @@ try SwiftZone.com().publish(withTheme: .default(
   githubURL: "https://github.com/asielcabrera"
 ), additionalSteps: [
 //  .addAppMarkdownFiles()
-    .installPlugin(.readingTime())
+    .installPlugin(.readingTime()),
+    .installPlugin(.checkTopics())
 ], plugins: [
   .splash(withClassPrefix: ""),
   

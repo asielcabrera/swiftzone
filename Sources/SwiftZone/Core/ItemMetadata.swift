@@ -9,5 +9,7 @@ import Publish
 import Plot
 
 extension SwiftZone.com {
-    struct ItemMetadata: WebsiteItemMetadata {}
+    struct ItemMetadata: WebsiteItemMetadata {
+        let topic: String
+    }
 }
