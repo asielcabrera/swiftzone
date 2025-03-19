@@ -1,13 +1,2 @@
-FROM swift:5.5.2-bionic as builder
-WORKDIR /blog
-COPY . .
-RUN swift build && swift run
-
-FROM nginx:1.17-alpine
-RUN apk --no-cache add curl
-RUN curl -L https://github.com/a8m/envsubst/releases/download/v1.1.0/envsubst-`uname -s`-`uname -m` -o envsubst && \
-    chmod +x envsubst && \
-    mv envsubst /usr/local/bin
-COPY ./nginx.config /etc/nginx/nginx.template
-CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/nginx.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
-COPY --from=builder /blog/Output /usr/share/nginx/html 
+��������F�m��ZnW�z��v*�r�+��^���j:9�!ڦ�'�֥j�^���zw"j��=�ZrF�z;(�����$o�T5���{-jY~��������$~)^
+�bj��qؠ����ׂ8��{-�諕���'r)�P��n�tKZ��^����"�TN2�ޟ��]>�X�j�k�ۜ�*'X�J�j�B����V�u�^�קr&��V��X�iȧr�춻�u��=��~�&
