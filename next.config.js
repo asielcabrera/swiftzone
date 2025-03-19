@@ -1,38 +1,17 @@
-/** @type {import('next').NextConfig} */
+// Update to ES module syntax
 const nextConfig = {
-  /* config options here */
-  distDir: process.env.NODE_ENV === "production" ? "build" : ".next",
+  output: 'export',  // For static export with Netlify
   images: {
-    unoptimized: true,
-    domains: [
-      "source.unsplash.com",
-      "images.unsplash.com",
-      "ext.same-assets.com",
-      "ugc.same-assets.com",
-    ],
+    unoptimized: true, // Required for static export
+    domains: ['images.unsplash.com'], // Add any image domains you're using
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "source.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "ext.same-assets.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "ugc.same-assets.com",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
+  // Any other configurations you need
 };
 
 export default nextConfig;
