@@ -1,6 +1,9 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
+// Add these two exports to fix the build error
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export function generateImageMetadata() {
   return [
