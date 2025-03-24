@@ -1,5 +1,5 @@
 [build]
-  publish = ".next"
+  publish = ".nuxt"
   command = "npm run build"
   
 [images]
