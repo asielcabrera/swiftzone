@@ -1,1 +1,0 @@
-{"file":"virtual_public.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,mCAAmC;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fux-ui-design.jpg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/ux-ui-design.jpg\")"],"version":3}

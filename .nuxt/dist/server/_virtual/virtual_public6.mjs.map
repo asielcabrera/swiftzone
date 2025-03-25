@@ -1,1 +1,0 @@
-{"version":3,"file":"virtual_public6.mjs","sources":["../../../../virtual:public?%2Fimages%2Fservices%2Fsoftware-development.jpg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/services/software-development.jpg\")"],"names":[],"mappings":";AAAuD,MAAe,aAAA,gBAAgB,2CAA2C;"}

@@ -1,6 +1,9 @@
 [build]
   publish = "dist"
   command = "bun run build"
+
+[dev]
+  targetPort = 3000
   
 [images]
   remote_images = [

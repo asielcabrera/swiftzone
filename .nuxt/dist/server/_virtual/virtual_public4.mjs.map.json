@@ -1,1 +1,0 @@
-{"file":"virtual_public4.mjs","mappings":";AAAuD,MAAe,aAAA,gBAAgB,uCAAuC;","names":[],"sources":["../../../../virtual:public?%2Fimages%2Fcase-studies%2Fcase-study-2.jpg"],"sourcesContent":["import { publicAssetsURL } from '#internal/nuxt/paths';export default publicAssetsURL(\"/images/case-studies/case-study-2.jpg\")"],"version":3}

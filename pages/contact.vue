@@ -5,13 +5,13 @@
       <div class="container-custom">
         <div class="max-w-3xl mx-auto">
           <nuxt-link to="/" class="inline-flex items-center text-primary font-medium mb-6 hover:underline" data-aos="fade-right" data-aos-delay="100">
-            <Icon name="lucide:arrow-left" class="h-4 w-4 mr-2" /> Volver al inicio
+            <Icon name="lucide:arrow-left" class="h-4 w-4 mr-2" /> Back to home
           </nuxt-link>
           <h1 class="text-3xl md:text-5xl font-bold mb-6 text-primary" data-aos="fade-up" data-aos-delay="200">
-            Contacto
+            Contact
           </h1>
           <p class="text-gray-700 text-lg mb-10" data-aos="fade-up" data-aos-delay="300">
-            Estamos aquí para ayudarte. Envíanos un mensaje y nos pondremos en contacto contigo lo antes posible.
+            We're here to help. Send us a message and we'll get back to you as soon as possible.
           </p>
         </div>
       </div>
@@ -23,7 +23,7 @@
         <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-md p-8">
           <form @submit.prevent="handleSubmit" class="space-y-6">
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
               <input 
                 type="text" 
                 id="name" 
@@ -36,7 +36,7 @@
             </div>
             
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
               <input 
                 type="email" 
                 id="email" 
@@ -49,7 +49,7 @@
             </div>
             
             <div>
-              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+              <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
               <input 
                 type="text" 
                 id="subject" 
@@ -62,7 +62,7 @@
             </div>
             
             <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
               <textarea 
                 id="message" 
                 v-model="formData.message" 
@@ -83,7 +83,7 @@
                 <span v-if="isSubmitting" class="mr-2">
                   <Icon name="lucide:loader" class="animate-spin h-5 w-5" />
                 </span>
-                {{ isSubmitting ? 'Enviando...' : 'Enviar mensaje' }}
+                {{ isSubmitting ? 'Sending...' : 'Send message' }}
               </button>
             </div>
             
@@ -125,32 +125,32 @@ const validateForm = () => {
   
   // Validate name
   if (!formData.name.trim()) {
-    errors.name = 'El nombre es requerido';
+    errors.name = 'Name is required';
     isValid = false;
   }
   
   // Validate email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!formData.email.trim()) {
-    errors.email = 'El correo electrónico es requerido';
+    errors.email = 'Email is required';
     isValid = false;
   } else if (!emailRegex.test(formData.email)) {
-    errors.email = 'Por favor ingrese un correo electrónico válido';
+    errors.email = 'Please enter a valid email address';
     isValid = false;
   }
   
   // Validate subject
   if (!formData.subject.trim()) {
-    errors.subject = 'El asunto es requerido';
+    errors.subject = 'Subject is required';
     isValid = false;
   }
   
   // Validate message
   if (!formData.message.trim()) {
-    errors.message = 'El mensaje es requerido';
+    errors.message = 'Message is required';
     isValid = false;
   } else if (formData.message.trim().length < 10) {
-    errors.message = 'El mensaje debe tener al menos 10 caracteres';
+    errors.message = 'Message must be at least 10 characters long';
     isValid = false;
   }
   
@@ -179,7 +179,7 @@ const handleSubmit = async () => {
     if (response.ok) {
       submitStatus.value = {
         success: true,
-        message: '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.'
+        message: 'Message sent successfully! We will contact you soon.'
       };
       
       // Reset form
@@ -187,14 +187,14 @@ const handleSubmit = async () => {
     } else {
       submitStatus.value = {
         success: false,
-        message: data.error || 'Hubo un error al enviar el mensaje. Por favor intenta de nuevo.'
+        message: data.error || 'There was an error sending your message. Please try again.'
       };
     }
   } catch (error) {
     console.error('Error sending email:', error);
     submitStatus.value = {
       success: false,
-      message: 'Hubo un error al enviar el mensaje. Por favor intenta de nuevo.'
+      message: 'There was an error sending your message. Please try again.'
     };
   } finally {
     isSubmitting.value = false;
