@@ -1,0 +1,15 @@
+const nav = { "home": "Inicio", "services": "Servicios", "projects": "Proyectos", "about": "Acerca de", "blog": "Blog", "contact": "Contacto" };
+const about = { "title": "Transformamos Ideas en Soluciones Digitales", "p1": "En SwiftZone, nos apasiona la innovación y el desarrollo de soluciones digitales que marcan la diferencia. Con más de 5 años de experiencia, hemos ayudado a empresas de diversos sectores a potenciar su presencia digital.", "p2": "Nuestro equipo multidisciplinar combina expertise en marketing digital, desarrollo de software y diseño UX/UI para ofrecer soluciones integrales que impactan positivamente en el crecimiento de tu negocio.", "stat1": "Clientes satisfechos", "stat2": "Proyectos completados", "stat3": "Profesionales", "stat4": "Años de experiencia", "cta": "Conoce a nuestro equipo", "exp": "Experiencia en el sector" };
+const language = { "switch": "EN" };
+const esTranslations = {
+  nav,
+  about,
+  language
+};
+export {
+  about,
+  esTranslations as default,
+  language,
+  nav
+};
+//# sourceMappingURL=es.json.mjs.map
